@@ -57,18 +57,19 @@ s
 
 Формально, пусть известны точные координаты остановочных павильонов:
 
-![$$S = \{(x_i, y_i)\}_{i=1}^{37}$$](http://www.sciweavers.org/upload/Tex2Img_1482005818/render.png)
+![$$S = \{(x_i, y_i)\}_{i=1}^{37}$$](https://raw.githubusercontent.com/alexmk7/pm_task_2016/master/images/1.png)
 
 пусть предсказаны следующие координаты остановок:
 
-![$$\hat{S} = \{(\hat{x_i}, \hat{y_i}\}_{i=1}^{37}$$](http://www.sciweavers.org/upload/Tex2Img_1482005760/render.png)
+![$$\hat{S} = \{(\hat{x_i}, \hat{y_i}\}_{i=1}^{37}$$](https://raw.githubusercontent.com/alexmk7/pm_task_2016/master/images/2.png)
 
 тогда штраф считается по формуле:
 
-![$$\frac{1}{37}\sum_{i}^{37}f\big(\sqrt{(x_i - \hat{x_i}))^2 + (y_i - \hat{y_i})^2}\big)$$](http://www.sciweavers.org/upload/Tex2Img_1482005840/render.png)
+![$$\frac{1}{37}\sum_{i}^{37}f\big(\sqrt{(x_i - \hat{x_i}))^2 + (y_i - \hat{y_i})^2}\big)$$](https://raw.githubusercontent.com/alexmk7/pm_task_2016/master/images/3.png)
 
 где
 
-![$$f(x) = \begin{cases} 0 &\mbox{if } x \le 20 \\ (x - 20)^2 & \mbox{if } x \gt 20 \end{cases} $$](http://www.sciweavers.org/upload/Tex2Img_1482005880/render.png)
+![$$f(x) = \begin{cases} 0 &\mbox{if } x \le 20 \\ (x - 20)^2 & \mbox{if } x \gt 20 \end{cases} $$](https://raw.githubusercontent.com/alexmk7/pm_task_2016/master/images/4.png)
+
 
 То есть если оценка попадает в круг радиуса *20* от известных координат, то остановка считается угаданной верно. В противном случае начисляется штраф, равный квадрату расстояния от круга. 
